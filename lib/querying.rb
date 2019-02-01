@@ -30,7 +30,16 @@ end
 def select_series_title_with_most_human_characters
   "SELECT title
    FROM series
-   WHERE series_id = (SELECT series_id);"
+   WHERE id = (SELECT series_id 
+               FROM characters 
+               WHERE species = \"human\" 
+               HAVING count(species) = 
+               (SELECT);
+
+0. find max human species grouped by series
+1. select the series id with max human species
+2.
+
 end
 
 def select_character_names_and_number_of_books_they_are_in
