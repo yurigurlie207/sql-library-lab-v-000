@@ -34,12 +34,12 @@ def select_series_title_with_most_human_characters
                FROM characters
 
                HAVING count(species) =
-                 (SELECT count(species) as MaxCount
+                 (SELECT series_id, count(species) as MaxCount
                   FROM characters
                   WHERE species = \"human\"
                   GROUP BY series_id
-                  ORDER BY MaxCount DESC Limit 1
-                  )
+                  ORDER BY count(species) DESC Limit 1
+                  ) A
                )
     ;"
 
