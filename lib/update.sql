@@ -1,1 +1,1 @@
-UPDATE characters set species = "Martian" HAVING id = max(id);
+UPDATE TOP(1) characters set species = "Martian" ORDER BY id DESC;
