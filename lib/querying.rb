@@ -36,9 +36,7 @@ def select_series_title_with_most_human_characters
                HAVING count(species) =
                (SELECT);
 
-0. find max human species grouped by series
-1. select the series id with max human species
-2. select title of series
+?
 
 end
 
