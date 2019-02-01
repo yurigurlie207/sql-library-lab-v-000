@@ -1,1 +1,1 @@
-UPDATE characters set specifes = "Martian"
+UPDATE characters set species = "Martian" WHERE
